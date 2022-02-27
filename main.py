@@ -96,7 +96,7 @@ async def on_message(message):
     if len(message.content) <= 0:
         return
 
-    commandsList = CommandManager.Paser(message.content, '!')
+    commandsList = CommandManager.Paser(message.content, os.getenv('COMAAND_PREFIX'))
     if len(commandsList) == 0:
         return
 
